@@ -1,5 +1,5 @@
 ---
-title: "Wastebin"
+title: "YasirBin"
 tagline: "Simple, easy text & code sharing."
 theme_color: "#468fff"
 git: "https://github.com/lemonyte/wastebin"

@@ -15,6 +15,6 @@ jobs:
         uses: BogDAAAMN/deta-deploy-action@v1.0.1
         with:
           deta-access-token: ${{ secrets.DETA_TOKEN }}
-          deta-name: 'server'
-          deta-project: 'wastebin'
+          deta-name: 'wastebin'
+          deta-project: 'pastebin'
           deta-project-dir: '.'

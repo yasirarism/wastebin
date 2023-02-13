@@ -1,7 +1,7 @@
 async function share() {
   const data = {
     url: window.location.href,
-    title: "Wastebin",
+    title: "YasirBin",
     text: documentData.filename,
   };
   if (window.navigator.canShare && window.navigator.canShare(data)) {
