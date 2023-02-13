@@ -3,7 +3,6 @@
 Simple, minimal pastebin service.
 
 ## Usage
-
 1. Copy some text
 2. Go to [wastebin.deta.dev](https://wastebin.deta.dev/)
 3. Paste the text
