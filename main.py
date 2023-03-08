@@ -68,7 +68,7 @@ async def view(id: str, request: Request):
     return templates.TemplateResponse('view.html', {'request': request, 'document': document})
 
 
-@app.get('/mediainfo/{id:path}', response_class=HTMLResponse)
+@app.get('/data/{id:path}', response_class=HTMLResponse)
 async def view_mediainfo(id: str, request: Request):
     document = await api_get(id)
     return templates.TemplateResponse('mediainfo.html', {'request': request, 'document': document})
