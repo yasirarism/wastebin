@@ -71,7 +71,7 @@ async def view(id: str, request: Request):
 @app.get('/mediainfo/{id:path}', response_class=HTMLResponse)
 async def view_mediainfo(id: str, request: Request):
     document = await api_get(id)
-    return templates.TemplateResponse('view.html', {'request': request, 'document': document})
+    return templates.TemplateResponse('mediainfo.html', {'request': request, 'document': document})
 
 
 @app.exception_handler(404)
