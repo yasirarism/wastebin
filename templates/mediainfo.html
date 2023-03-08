@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block title %}
+{% if document.filename %}
+{{ document.filename }} - {{ super() }}
+{% else %}
+{{ super() }}
+{% endif %}
+{% endblock %}
+
+{% block navbar %}
+{{ super() }}
+<a class="w3-bar-item w3-button w3-right" onclick="raw();">
+  <span class="icon"><i class="fa fa-file-text"></i></span>
+  Raw
+</a>
+<a class="w3-bar-item w3-button w3-right" onclick="downloadText();">
+  <span class="icon"><i class="fa fa-download"></i></span>
+  Download
+</a>
+<a class="w3-bar-item w3-button w3-right" onclick="duplicate();">
+  <span class="icon"><i class="fa fa-clone"></i></span>
+  Duplicate
+</a>
+<a class="w3-bar-item w3-button w3-right" onclick="copy();">
+  <span class="icon"><i class="fa fa-clipboard"></i></span>
+  Copy
+</a>
+<a class="w3-bar-item w3-button w3-right" onclick="share();">
+  <span class="icon"><i class="fa fa-share-square-o"></i></span>
+  Share
+</a>
+{% endblock %}
+
+{% block content %}
+<pre class="document"><code>{{ document.content }}</code></pre>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="/static/view.js"></script>
+{% endblock %}
