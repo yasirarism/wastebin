@@ -68,6 +68,12 @@ async def view(id: str, request: Request):
     return templates.TemplateResponse('view.html', {'request': request, 'document': document})
 
 
+@app.get('/mediainfo/{id:path}', response_class=HTMLResponse)
+async def view_mediainfo(id: str, request: Request):
+    document = await api_get(id)
+    return templates.TemplateResponse('view.html', {'request': request, 'document': document})
+
+
 @app.exception_handler(404)
 async def not_found_handler(request: Request, _):
     return templates.TemplateResponse('404.html', {'request': request})
