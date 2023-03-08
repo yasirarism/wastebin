@@ -1,4 +1,4 @@
-# Wastebin
+# YasirBin
 
 Simple, minimal pastebin service.
 
